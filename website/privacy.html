@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — MockShot</title>
+    <meta name="description" content="How MockShot collects, uses, and protects your information." />
+    <meta property="og:title" content="Privacy Policy — MockShot" />
+    <meta property="og:description" content="How MockShot collects, uses, and protects your information." />
+    <meta property="og:type" content="article" />
+    <link rel="canonical" href="/privacy.html" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="nav" id="nav">
+      <div class="container nav__inner">
+        <a class="logo" href="index.html" aria-label="MockShot home">
+          <span class="logo__mark" aria-hidden="true">M</span>
+          <span>MockShot</span>
+        </a>
+        <nav class="nav__links" aria-label="Primary">
+          <a href="index.html#features">Features</a>
+          <a href="privacy.html" aria-current="page">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="nav__actions">
+          <a class="btn btn--outline" href="index.html#download">Download App</a>
+          <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Open menu" data-nav-toggle>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="legal-page">
+      <div class="container">
+        <article class="legal-page__inner">
+          <h1>Privacy Policy</h1>
+          <p class="legal-page__updated">Last updated: January 2026</p>
+
+          <p>
+            MockShot ("we", "our", or "us") respects your privacy. This Privacy Policy explains what
+            information we collect, how we use it, and the choices you have.
+          </p>
+
+          <h2>Information we collect</h2>
+          <p>
+            We collect only the information needed to operate MockShot: account details you provide,
+            basic usage analytics, and support requests you send to us.
+          </p>
+
+          <h2>How we use information</h2>
+          <p>
+            We use your information to provide and improve the service, respond to support requests,
+            and communicate important updates. We do not sell your personal information.
+          </p>
+
+          <h2>Data storage &amp; security</h2>
+          <p>
+            Your data is stored on trusted infrastructure providers with industry-standard
+            protections in place. We limit access to authorized personnel only.
+          </p>
+
+          <h2>Your rights</h2>
+          <p>
+            You can request access to, correction of, or deletion of your personal data at any time
+            by contacting us at support@mockshot.ai.
+          </p>
+
+          <h2>Contact</h2>
+          <p>
+            Questions about this policy? Reach out at
+            <a href="mailto:support@mockshot.ai">support@mockshot.ai</a>.
+          </p>
+        </article>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <a class="logo" href="index.html">
+            <span class="logo__mark" aria-hidden="true">M</span>
+            <span>MockShot</span>
+          </a>
+          <nav class="footer__links" aria-label="Footer">
+            <a href="index.html#features">Features</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms</a>
+            <a href="index.html#contact">Contact</a>
+          </nav>
+        </div>
+        <div class="footer__bottom">
+          <span>Version 0.0.1</span>
+          <span>© 2026 MockShot. All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var nav = document.getElementById("nav");
+        var toggle = document.querySelector("[data-nav-toggle]");
+        if (!nav || !toggle) return;
+        toggle.addEventListener("click", function () {
+          var open = nav.classList.toggle("is-open");
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+          toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        });
+      })();
+    </script>
+  </body>
+</html>

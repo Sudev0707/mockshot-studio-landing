@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Terms of Service — MockShot</title>
+    <meta name="description" content="The terms that govern your use of MockShot." />
+    <meta property="og:title" content="Terms of Service — MockShot" />
+    <meta property="og:description" content="The terms that govern your use of MockShot." />
+    <meta property="og:type" content="article" />
+    <link rel="canonical" href="/terms.html" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="nav" id="nav">
+      <div class="container nav__inner">
+        <a class="logo" href="index.html" aria-label="MockShot home">
+          <span class="logo__mark" aria-hidden="true">M</span>
+          <span>MockShot</span>
+        </a>
+        <nav class="nav__links" aria-label="Primary">
+          <a href="index.html#features">Features</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html" aria-current="page">Terms</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="nav__actions">
+          <a class="btn btn--outline" href="index.html#download">Download App</a>
+          <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Open menu" data-nav-toggle>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="legal-page">
+      <div class="container">
+        <article class="legal-page__inner">
+          <h1>Terms of Service</h1>
+          <p class="legal-page__updated">Last updated: January 2026</p>
+
+          <p>
+            These Terms of Service ("Terms") govern your access to and use of MockShot. By using the
+            service, you agree to these Terms.
+          </p>
+
+          <h2>Use of the service</h2>
+          <p>
+            You may use MockShot to create device mockups and store screenshots for lawful purposes.
+            You are responsible for the content you create and export.
+          </p>
+
+          <h2>Accounts</h2>
+          <p>
+            You are responsible for keeping your account credentials secure and for all activity
+            that occurs under your account.
+          </p>
+
+          <h2>Intellectual property</h2>
+          <p>
+            MockShot and its original content are owned by us. You retain ownership of the assets
+            you create and export.
+          </p>
+
+          <h2>Disclaimer</h2>
+          <p>
+            The service is provided "as is" without warranties of any kind. To the fullest extent
+            permitted by law, we are not liable for any indirect or consequential damages.
+          </p>
+
+          <h2>Changes</h2>
+          <p>
+            We may update these Terms from time to time. Continued use of the service after changes
+            means you accept the updated Terms.
+          </p>
+
+          <h2>Contact</h2>
+          <p>
+            Questions about these Terms? Email us at
+            <a href="mailto:support@mockshot.ai">support@mockshot.ai</a>.
+          </p>
+        </article>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <a class="logo" href="index.html">
+            <span class="logo__mark" aria-hidden="true">M</span>
+            <span>MockShot</span>
+          </a>
+          <nav class="footer__links" aria-label="Footer">
+            <a href="index.html#features">Features</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms</a>
+            <a href="index.html#contact">Contact</a>
+          </nav>
+        </div>
+        <div class="footer__bottom">
+          <span>Version 0.0.1</span>
+          <span>© 2026 MockShot. All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var nav = document.getElementById("nav");
+        var toggle = document.querySelector("[data-nav-toggle]");
+        if (!nav || !toggle) return;
+        toggle.addEventListener("click", function () {
+          var open = nav.classList.toggle("is-open");
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+          toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        });
+      })();
+    </script>
+  </body>
+</html>
