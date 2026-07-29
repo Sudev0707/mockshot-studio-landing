@@ -6,16 +6,29 @@
   --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --color-background: #ffffff;
   --color-foreground: #111827;
-  --color-primary: #2563eb;
+  /* Brand blue from logo background (#254D8E) */
+  --color-primary: #254d8e;
   --color-primary-foreground: #ffffff;
   --color-muted: #f9fafb;
   --color-muted-foreground: #6b7280;
-  --color-accent: #eff6ff;
-  --color-accent-foreground: #1e40af;
+  --color-accent: #eef3f9;
+  --color-accent-foreground: #1e3f74;
   --color-border: rgba(0, 0, 0, 0.1);
   --color-input: rgba(0, 0, 0, 0.1);
-  --color-ring: #2563eb;
+  --color-ring: #254d8e;
   --color-destructive: #d4183d;
+  /* Remap Tailwind blue scale to logo brand */
+  --color-blue-50: #eef3f9;
+  --color-blue-100: #d6e2f0;
+  --color-blue-200: #adc5e1;
+  --color-blue-300: #84a8d2;
+  --color-blue-400: #5b8bc3;
+  --color-blue-500: #3a6aad;
+  --color-blue-600: #254d8e;
+  --color-blue-700: #1e3f74;
+  --color-blue-800: #17315a;
+  --color-blue-900: #102240;
+  --color-blue-950: #0a1628;
 }
 
 @layer base {
@@ -157,12 +170,12 @@
 }
 
 .ms-legal-page a {
-  color: #2563eb;
+  color: #254d8e;
   font-weight: 500;
 }
 
 .ms-legal-page a:hover {
-  color: #1d4ed8;
+  color: #1e3f74;
 }
 
 .ms-legal-page strong {
@@ -183,7 +196,7 @@
 .ms-notfound h1 {
   font-size: 96px;
   font-weight: 900;
-  color: #2563eb;
+  color: #254d8e;
   margin: 0 0 8px;
   letter-spacing: -0.04em;
 }

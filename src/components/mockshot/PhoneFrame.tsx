@@ -105,8 +105,8 @@ export function MockShotScreen() {
       name: "Hero Screenshot",
       device: "iPhone 15 Pro",
       res: "1290×2796",
-      from: "#3b82f6",
-      to: "#2563eb",
+      from: "#3a6aad",
+      to: "#254d8e",
       active: true,
     },
     {
@@ -221,7 +221,7 @@ export function ExportScreen() {
       <div className="flex-1 space-y-2.5 overflow-hidden px-3">
         <div
           className="flex flex-col items-center justify-center gap-2 rounded-[18px] p-3"
-          style={{ background: "linear-gradient(145deg, #3b82f6, #1d4ed8)" }}
+          style={{ background: "linear-gradient(145deg, #3a6aad, #1e3f74)" }}
         >
           <div className="h-[88px] w-14 rounded-[14px] bg-white/25 shadow-lg ring-1 ring-white/20" />
           <div className="h-1.5 w-16 rounded-full bg-white/45" />

@@ -923,10 +923,10 @@ function Contact() {
             Questions, feedback, or partnership ideas — we&apos;d love to hear from you.
           </p>
           <a
-            href="mailto:support@mockshot.ai"
+            href="mailto:support@mockshot.app"
             className="font-display inline-flex items-center gap-2 text-2xl font-bold text-blue-600 transition-colors hover:text-blue-500"
           >
-            support@mockshot.ai
+            support@mockshot.app
             <ArrowRight className="h-5 w-5" />
           </a>
         </div>
@@ -1009,7 +1009,7 @@ export function Landing() {
   return (
     <>
       <Hero />
-      <TrustedBy />
+      {/* <TrustedBy /> */}
       <HowItWorks />
       <Features />
       <WhyMockShot />

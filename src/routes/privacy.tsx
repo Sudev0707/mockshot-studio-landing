@@ -75,7 +75,7 @@ function Privacy() {
           <h3>Communications</h3>
           <p>
             If you contact us at{" "}
-            <a href="mailto:support@mockshot.ai">support@mockshot.ai</a>, we keep the contents of
+            <a href="mailto:support@mockshot.app">support@mockshot.app</a>, we keep the contents of
             that correspondence so we can respond and improve support.
           </p>
 
@@ -144,7 +144,7 @@ function Privacy() {
           </ul>
           <p>
             To exercise these rights, email{" "}
-            <a href="mailto:support@mockshot.ai">support@mockshot.ai</a>. We may need to verify your
+            <a href="mailto:support@mockshot.app">support@mockshot.app</a>. We may need to verify your
             identity before fulfilling a request.
           </p>
 
@@ -180,7 +180,7 @@ function Privacy() {
           <h2>11. Contact</h2>
           <p>
             Questions about this Privacy Policy or your data? Reach us at{" "}
-            <a href="mailto:support@mockshot.ai">support@mockshot.ai</a>.
+            <a href="mailto:support@mockshot.app">support@mockshot.app</a>.
           </p>
           <p>
             See also our <Link to="/terms">Terms of Service</Link>.

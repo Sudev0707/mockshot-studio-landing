@@ -67,7 +67,7 @@ function Terms() {
           <p>
             You are responsible for keeping your account credentials secure and for all activity
             that occurs under your account. Notify us promptly at{" "}
-            <a href="mailto:support@mockshot.ai">support@mockshot.ai</a> if you suspect unauthorized
+            <a href="mailto:support@mockshot.app">support@mockshot.app</a> if you suspect unauthorized
             access. We may suspend or terminate accounts that violate these Terms or pose a
             security risk.
           </p>
@@ -182,7 +182,7 @@ function Terms() {
           <h2>15. Contact</h2>
           <p>
             Questions about these Terms? Email us at{" "}
-            <a href="mailto:support@mockshot.ai">support@mockshot.ai</a>.
+            <a href="mailto:support@mockshot.app">support@mockshot.app</a>.
           </p>
           <p>
             See also our <Link to="/privacy">Privacy Policy</Link>.

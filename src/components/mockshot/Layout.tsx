@@ -6,6 +6,8 @@ import { cn } from "@/lib/utils";
 const navLinks = [
   { label: "Features", href: "/#features" },
   { label: "How it Works", href: "/#how-it-works" },
+  { label: "Privacy", href: "/privacy" },
+  { label: "Terms", href: "/terms" },
   // { label: "Pricing", href: "/#pricing" },
   // { label: "Roadmap", href: "/#roadmap" },
 ];
@@ -154,7 +156,7 @@ export function Footer() {
     {
       heading: "Support",
       links: [
-        { label: "Email us", href: "mailto:support@mockshot.ai" },
+        { label: "Email us", href: "mailto:support@mockshot.app" },
         { label: "Privacy", href: "/privacy" },
         { label: "Terms", href: "/terms" },
       ],
@@ -242,7 +244,7 @@ export function Footer() {
               Terms
             </Link>
             <a
-              href="mailto:support@mockshot.ai"
+              href="mailto:support@mockshot.app"
               className="text-xs text-gray-700 transition-colors hover:text-gray-400"
             >
               Contact
