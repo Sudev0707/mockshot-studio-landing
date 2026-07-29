@@ -1015,7 +1015,7 @@ export function Landing() {
       <WhyMockShot />
       {/* <Timeline /> */}
       {/* <Market /> */}
-      {/* <Pricing /> */}
+      <Pricing />
       {/* <Testimonials /> */}
       <FAQ />
       <Contact />
