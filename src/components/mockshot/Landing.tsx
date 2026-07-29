@@ -4,16 +4,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { PhoneFrame, MockShotScreen, ShowcaseScreen } from "@/components/mockshot/PhoneFrame";
 import { StoreButtons } from "@/components/mockshot/StoreButtons";
 import { cn } from "@/lib/utils";
 import {
   ArrowRight,
   BarChart3,
-  Check,
   CheckCircle,
   Download,
-  FileImage,
   ImageIcon,
   Layers,
   Maximize2,
@@ -23,7 +20,6 @@ import {
   TrendingUp,
   Upload,
   Users,
-  X,
 } from "lucide-react";
 
 function SectionBadge({
@@ -122,24 +118,28 @@ function Hero() {
             </div>
           </div>
 
-          <div className="relative flex h-[560px] items-center justify-center">
-            <div className="absolute top-8 left-0 z-20 hidden items-center gap-2 rounded-xl border border-white/20 bg-white px-3 py-2 text-xs font-semibold text-gray-700 shadow-xl md:flex">
-              <div className="h-2 w-2 rounded-full bg-blue-500" />
-              4K Export Ready
-            </div>
-            <div className="absolute right-0 bottom-20 z-20 hidden rounded-xl border border-white/20 bg-white px-3 py-2 shadow-xl md:block">
-              <div className="text-[10px] font-normal text-gray-400">Resolution</div>
-              <div className="text-sm font-bold text-gray-900">1290 × 2796</div>
-            </div>
-            <div className="absolute top-1/2 left-0 z-20 hidden -translate-y-1/2 items-center gap-1 rounded-xl bg-white px-3 py-2 text-xs font-semibold text-blue-700 shadow-xl md:flex">
-              <Star className="h-3 w-3 fill-blue-600 text-blue-600" />
-              Store-ready
+          <div className="relative mx-auto flex h-[520px] w-full max-w-[400px] items-center justify-center lg:mx-0 lg:h-[580px]">
+            {/* Back phone — Choose device */}
+            <div
+              className="ms-float absolute top-0 right-0 z-10 w-[58%] sm:right-2"
+              style={{ animationDelay: "-2.5s" }}
+            >
+              <img
+                src="/hero/choose_device_transparent.png"
+                alt="MockShot choose device screen"
+                className="w-full origin-bottom rotate-[6deg] drop-shadow-[0_28px_48px_rgba(0,0,0,0.32)]"
+                draggable={false}
+              />
             </div>
 
-            <div className="ms-float" style={{ transform: "rotate(-4deg)" }}>
-              <PhoneFrame width={240}>
-                <MockShotScreen />
-              </PhoneFrame>
+            {/* Front phone — Home / projects */}
+            <div className="ms-float absolute bottom-0 left-0 z-20 w-[66%] sm:left-1">
+              <img
+                src="/hero/mockshot_transparent.png"
+                alt="MockShot home screen"
+                className="w-full origin-bottom -rotate-[5deg] drop-shadow-[0_40px_64px_rgba(0,0,0,0.4)]"
+                draggable={false}
+              />
             </div>
           </div>
         </div>
@@ -184,63 +184,147 @@ function HowItWorks() {
   const steps = [
     {
       icon: Upload,
-      num: "01",
-      title: "Import Screenshot",
-      desc: "Tap to import any screenshot directly from your camera roll or take one live.",
+      color: "bg-blue-600",
+      title: "Import screenshot",
+      desc: "Pull any screenshot from your camera roll or capture one live — ready in one tap.",
     },
     {
       icon: Smartphone,
-      num: "02",
-      title: "Choose Device",
-      desc: "Select from 30+ device frames — iPhone, Android, iPad, and more.",
+      color: "bg-sky-500",
+      title: "Choose a device frame",
+      desc: "Pick from 30+ iPhone, Android, and tablet bezels with real color options.",
     },
     {
       icon: Palette,
-      num: "03",
-      title: "Customize Background",
-      desc: "Pick gradients, solid colors, or upload your own brand imagery.",
+      color: "bg-amber-500",
+      title: "Adjust & style",
+      desc: "Fill, fit, zoom, and stretch your screenshot so it sits perfectly in the frame.",
     },
     {
       icon: Download,
-      num: "04",
-      title: "Export High Quality",
-      desc: "Download 4K-ready assets for App Store and Play Store in seconds.",
+      color: "bg-emerald-500",
+      title: "Export store-ready",
+      desc: "Share or download PNG assets sized for App Store and Play Store submissions.",
     },
   ];
 
   return (
-    <section className="bg-white py-24" id="how-it-works">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="ms-reveal mb-16 text-center">
+    <section className="overflow-hidden bg-white py-24" id="how-it-works">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2 lg:gap-16">
+        <div className="ms-reveal">
           <SectionBadge tone="blue">HOW IT WORKS</SectionBadge>
-          <h2 className="font-display mb-4 text-4xl font-black tracking-tight text-gray-900">
-            Four steps to perfect mockups
+          <h2 className="font-display mb-4 text-4xl font-black tracking-tight text-gray-900 lg:text-[42px]">
+            Easy steps for{" "}
+            <span className="text-blue-600">MockShot makers</span>
           </h2>
-          <p className="mx-auto max-w-md text-lg text-gray-500">
-            From raw screenshot to published store asset — in minutes.
+          <p className="mb-10 max-w-md text-lg leading-relaxed text-gray-500">
+            From raw screenshot to polished store asset — designed to feel natural on your phone.
           </p>
+
+          <ul className="space-y-7">
+            {steps.map((step) => (
+              <li key={step.title} className="flex gap-4">
+                <div
+                  className={cn(
+                    "flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl text-white shadow-sm",
+                    step.color,
+                  )}
+                >
+                  <step.icon className="h-5 w-5" strokeWidth={2} />
+                </div>
+                <div>
+                  <h3 className="font-display mb-1 text-[16px] font-bold text-gray-900">
+                    {step.title}
+                  </h3>
+                  <p className="max-w-sm text-sm leading-relaxed text-gray-500">{step.desc}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-4">
-          {steps.map((step, i) => (
-            <div key={step.num} className="relative">
-              <div className="ms-reveal rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50">
-                  <step.icon className="h-5 w-5 text-blue-600" strokeWidth={1.8} />
-                </div>
-                <div className="mb-2 text-[11px] font-black tracking-widest text-blue-500">
-                  {step.num}
-                </div>
-                <h3 className="font-display mb-2 text-[15px] font-bold text-gray-900">{step.title}</h3>
-                <p className="text-sm leading-relaxed text-gray-500">{step.desc}</p>
-              </div>
-              {i < steps.length - 1 && (
-                <div className="absolute top-10 -right-2.5 z-10 hidden h-5 w-5 items-center justify-center rounded-full border border-gray-200 bg-gray-100 md:flex">
-                  <ArrowRight className="h-3 w-3 text-gray-400" />
-                </div>
-              )}
-            </div>
-          ))}
+        <div className="ms-reveal relative flex min-h-[480px] items-end justify-center lg:min-h-[560px]">
+          <div className="absolute inset-y-6 right-0 left-8 rounded-[32px] bg-sky-50 sm:left-16" />
+          <img
+            src="/hero/choose_device_transparent.png"
+            alt="MockShot choose device screen"
+            className="relative z-10 w-[72%] max-w-[280px] drop-shadow-[0_32px_56px_rgba(15,23,42,0.22)] sm:w-[68%]"
+            draggable={false}
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function FeatureSplit({
+  id,
+  badge,
+  title,
+  titleAccent,
+  description,
+  points,
+  image,
+  imageAlt,
+  reverse = false,
+  softBg = "bg-blue-50/70",
+}: {
+  id?: string;
+  badge: string;
+  title: string;
+  titleAccent?: string;
+  description: string;
+  points: string[];
+  image: string;
+  imageAlt: string;
+  reverse?: boolean;
+  softBg?: string;
+}) {
+  return (
+    <section className="overflow-hidden bg-white py-20" id={id}>
+      <div
+        className={cn(
+          "mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2 lg:gap-16",
+          reverse && "lg:[&>*:first-child]:order-2 lg:[&>*:last-child]:order-1",
+        )}
+      >
+        <div className="ms-reveal">
+          <SectionBadge tone="blue">{badge}</SectionBadge>
+          <h2 className="font-display mb-4 text-3xl font-black tracking-tight text-gray-900 lg:text-4xl">
+            {title}
+            {titleAccent ? (
+              <>
+                {" "}
+                <span className="text-blue-600">{titleAccent}</span>
+              </>
+            ) : null}
+          </h2>
+          <p className="mb-8 max-w-md text-lg leading-relaxed text-gray-500">{description}</p>
+          <ul className="mb-9 space-y-3">
+            {points.map((point) => (
+              <li key={point} className="flex items-start gap-2.5 text-sm text-gray-700">
+                <CheckCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-blue-500" strokeWidth={2} />
+                {point}
+              </li>
+            ))}
+          </ul>
+          <a
+            href="/#cta"
+            className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all hover:-translate-y-0.5 hover:bg-blue-500 hover:shadow-md"
+          >
+            Get the app
+            <ArrowRight className="h-4 w-4" />
+          </a>
+        </div>
+
+        <div className="ms-reveal relative flex min-h-[460px] items-center justify-center lg:min-h-[520px]">
+          <div className={cn("absolute inset-6 rounded-[32px] sm:inset-8", softBg)} />
+          <img
+            src={image}
+            alt={imageAlt}
+            className="relative z-10 w-[74%] max-w-[300px] drop-shadow-[0_32px_56px_rgba(15,23,42,0.2)]"
+            draggable={false}
+          />
         </div>
       </div>
     </section>
@@ -248,174 +332,166 @@ function HowItWorks() {
 }
 
 function Features() {
-  const features = [
-    {
-      icon: Smartphone,
-      color: "bg-blue-50 text-blue-600",
-      title: "Device Mockups",
-      desc: "30+ realistic frames — iPhone 15, Android flagships, iPad — updated with every new release.",
-    },
-    {
-      icon: ImageIcon,
-      color: "bg-sky-50 text-sky-600",
-      title: "App Store Screenshots",
-      desc: 'Pre-configured canvases for every App Store requirement: 6.7", 6.5", 5.5" and all sizes.',
-    },
-    {
-      icon: FileImage,
-      color: "bg-violet-50 text-violet-600",
-      title: "Play Store Screenshots",
-      desc: "All Google Play dimensions covered. Phone, tablet, and Chromebook variants ready to export.",
-    },
-    {
-      icon: Palette,
-      color: "bg-rose-50 text-rose-600",
-      title: "Custom Backgrounds",
-      desc: "Gradient builder, solid color palette, and image upload. Your brand, your way.",
-    },
-    {
-      icon: Layers,
-      color: "bg-amber-50 text-amber-600",
-      title: "Add Logos & Images",
-      desc: "Layer your app icon, brand mark, and UI elements with precise positioning controls.",
-    },
-    {
-      icon: Maximize2,
-      color: "bg-teal-50 text-teal-600",
-      title: "High Resolution Export",
-      desc: "1x, 2x, 3x — up to 4K. Every pixel is print-ready and platform-compliant.",
-    },
-  ];
-
   return (
-    <section className="bg-gray-50/60 py-24" id="features">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="ms-reveal mb-16 text-center">
-          <SectionBadge>FEATURES</SectionBadge>
-          <h2 className="font-display mb-4 text-4xl font-black tracking-tight text-gray-900">
-            Everything you need, nothing you don&apos;t
-          </h2>
-          <p className="mx-auto max-w-md text-lg text-gray-500">
-            Professional-grade tools built for speed, inside a mobile app.
-          </p>
-        </div>
-
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {features.map((f) => (
-            <div
-              key={f.title}
-              className="ms-reveal cursor-default rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
-            >
-              <div className={cn("mb-4 flex h-12 w-12 items-center justify-center rounded-xl", f.color)}>
-                <f.icon className="h-6 w-6" strokeWidth={1.8} />
-              </div>
-              <h3 className="font-display mb-2 text-[15px] font-bold text-gray-900">{f.title}</h3>
-              <p className="text-sm leading-relaxed text-gray-500">{f.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function WhyMockShot() {
-  const rows = [
-    { label: "Platform", bad: "Desktop only", good: "Mobile-first" },
-    { label: "Complexity", bad: "Complex software", good: "Intuitive & simple" },
-    { label: "Speed", bad: "Hours of work", good: "Minutes to finish" },
-    { label: "Price", bad: "Expensive subscriptions", good: "Affordable plans" },
-    { label: "Skill required", bad: "Design expertise", good: "Anyone can use it" },
-  ];
-
-  return (
-    <section className="bg-white py-24" id="why">
-      <div className="mx-auto max-w-4xl px-6">
-        <div className="ms-reveal mb-16 text-center">
-          <SectionBadge>WHY MOCKSHOT</SectionBadge>
-          <h2 className="font-display mb-4 text-4xl font-black tracking-tight text-gray-900">
-            The smarter way to create mockups
-          </h2>
-          <p className="text-lg text-gray-500">Traditional design tools weren&apos;t built for your workflow.</p>
-        </div>
-
-        <div className="ms-reveal">
-          <div className="mb-5 grid grid-cols-[1fr_1fr_1fr] px-6">
-            <div />
-            <div className="text-center">
-              <div className="inline-flex items-center gap-1.5 rounded-full bg-gray-100 px-3 py-1.5 text-xs font-bold text-gray-500">
-                <X className="h-3 w-3 text-red-400" />
-                Traditional Tools
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="inline-flex items-center gap-1.5 rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs font-bold text-blue-700">
-                <Check className="h-3 w-3 text-blue-500" />
-                MockShot
-              </div>
-            </div>
+    <>
+      {/* <section className="bg-gray-50/80 py-24" id="features">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="ms-reveal mb-14 max-w-xl">
+            <SectionBadge>FEATURES</SectionBadge>
+            <h2 className="font-display mb-4 text-4xl font-black tracking-tight text-gray-900">
+              One app,{" "}
+              <span className="text-blue-600">every store asset</span>
+            </h2>
+            <p className="text-lg leading-relaxed text-gray-500">
+              Device mockups, store canvases, backgrounds, and export — built for makers who ship
+              from their phone.
+            </p>
           </div>
 
-          <div className="overflow-hidden rounded-2xl border border-gray-100 shadow-sm">
-            {rows.map((row, i) => (
+          <div className="ms-reveal grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                title: "Device Mockups",
+                desc: "Realistic bezels for iPhone, Pixel, and more.",
+                image: "/hero/choose_device_transparent.png",
+                tone: "from-sky-100 to-blue-50",
+              },
+              {
+                title: "Store Screenshots",
+                desc: "Play Store & App Store layouts with gradients.",
+                image: "/hero/playstore_phone_transparent.png",
+                tone: "from-indigo-100 to-sky-50",
+              },
+              {
+                title: "Adjust & Fit",
+                desc: "Fill, zoom, and stretch screenshots precisely.",
+                image: "/hero/adjust_screenshot_transparent.png",
+                tone: "from-cyan-50 to-blue-50",
+              },
+              {
+                title: "Export PNG",
+                desc: "Share high-res assets ready for submission.",
+                image: "/hero/mockshot_transparent.png",
+                tone: "from-blue-100 to-slate-50",
+              },
+            ].map((item) => (
               <div
-                key={row.label}
+                key={item.title}
                 className={cn(
-                  "grid grid-cols-[1fr_1fr_1fr] items-center px-6 py-4",
-                  i % 2 === 0 ? "bg-white" : "bg-gray-50/60",
+                  "relative overflow-hidden rounded-[28px] bg-gradient-to-b p-5 pt-6 shadow-sm",
+                  item.tone,
                 )}
               >
-                <div className="text-sm font-semibold text-gray-700">{row.label}</div>
-                <div className="text-center">
-                  <span className="text-sm text-gray-400">{row.bad}</span>
+                <div className="relative z-10 mb-4">
+                  <h3 className="font-display text-[15px] font-bold text-gray-900">{item.title}</h3>
+                  <p className="mt-1 text-sm leading-relaxed text-gray-600">{item.desc}</p>
                 </div>
-                <div className="text-center">
-                  <span className="inline-block rounded-lg bg-blue-50 px-2.5 py-0.5 text-sm font-semibold text-blue-700">
-                    {row.good}
-                  </span>
-                </div>
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="relative mx-auto -mb-10 w-[72%] max-w-[160px] drop-shadow-lg"
+                  draggable={false}
+                />
               </div>
             ))}
           </div>
         </div>
-      </div>
-    </section>
+      </section> */}
+
+      <FeatureSplit
+        badge="STORE SCREENSHOTS"
+        title="Design Play Store &"
+        titleAccent="App Store layouts"
+        description="Build marketing screens with gradients, headlines, and device frames — then share or export in one tap."
+        points={[
+          "Presets for Play Store Phone and App Store sizes",
+          "Gradient & solid background picker with live preview",
+          "Text, image, background, and device tabs in one sheet",
+        ]}
+        image="/hero/playstore_phone_transparent.png"
+        imageAlt="MockShot Play Store screenshot editor"
+        softBg="bg-indigo-50/80"
+      />
+
+      <FeatureSplit
+        badge="ADJUST PROPERTIES"
+        title="Fine-tune every"
+        titleAccent="screenshot fit"
+        description="Move, zoom, and stretch your screenshot inside the frame so nothing important gets cropped."
+        points={[
+          "Fill screen or fit inside frame modes",
+          "Quick zoom steps from 1x to 2x",
+          "Horizontal stretch controls for perfect edge match",
+        ]}
+        image="/hero/adjust_screenshot_transparent.png"
+        imageAlt="MockShot adjust screenshot properties"
+        reverse
+        softBg="bg-sky-50"
+      />
+    </>
   );
 }
 
-function Showcase() {
-  const phones = [
-    { from: "#3b82f6", to: "#2563eb", label: "App Store · Hero" },
-    { from: "#8b5cf6", to: "#6d28d9", label: "Feature Tour" },
-    { from: "#f43f5e", to: "#e11d48", label: "Onboarding" },
-    { from: "#f59e0b", to: "#d97706", label: "Play Store" },
-    { from: "#3b82f6", to: "#1d4ed8", label: "iPad Layout" },
+function WhyMockShot() {
+  const items = [
+    {
+      icon: Smartphone,
+      title: "Mobile-first workflow",
+      desc: "Create and export mockups from your pocket — no desktop suite required.",
+    },
+    {
+      icon: Layers,
+      title: "30+ device frames",
+      desc: "iPhone, Android flagships, and more — with color variants for each frame.",
+    },
+    {
+      icon: Palette,
+      title: "Brand-ready backgrounds",
+      desc: "Gradients, solids, and custom colors that match your product identity.",
+    },
+    {
+      icon: ImageIcon,
+      title: "Store-sized canvases",
+      desc: "Layouts tuned for App Store and Play Store screenshot requirements.",
+    },
+    {
+      icon: Maximize2,
+      title: "Precise adjust tools",
+      desc: "Fill, fit, zoom, and stretch so every pixel lands where you want it.",
+    },
+    {
+      icon: Download,
+      title: "High-res PNG export",
+      desc: "Share or download crisp assets ready for store submission and marketing.",
+    },
   ];
 
   return (
-    <section className="overflow-hidden bg-gray-950 py-24" id="examples">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="ms-reveal mb-16 text-center">
-          <SectionBadge tone="dark">SHOWCASE</SectionBadge>
-          <h2 className="font-display mb-4 text-4xl font-black tracking-tight text-white">
-            Beautiful results, every time
+    <section className="bg-white py-24" id="why">
+      <div className="mx-auto max-w-5xl px-6">
+        <div className="ms-reveal mb-14 text-center">
+          <SectionBadge>WHY MOCKSHOT</SectionBadge>
+          <h2 className="font-display mb-4 text-4xl font-black tracking-tight text-gray-900">
+            Built for how makers actually ship
           </h2>
-          <p className="text-lg text-gray-400">
-            See what developers and designers create with MockShot every day.
+          <p className="mx-auto max-w-md text-lg text-gray-500">
+            Everything you need to turn screenshots into store-ready visuals — without design
+            software.
           </p>
         </div>
 
-        <div className="flex items-end justify-center gap-5 overflow-x-auto pb-4">
-          {phones.map((phone, i) => (
-            <div
-              key={phone.label}
-              className="ms-reveal flex flex-shrink-0 flex-col items-center"
-              style={{ transform: `translateY(${i % 2 === 0 ? "0" : "28px"})` }}
-            >
-              <PhoneFrame width={155}>
-                <ShowcaseScreen from={phone.from} to={phone.to} />
-              </PhoneFrame>
-              <div className="mt-4 text-center text-xs font-medium text-gray-500">{phone.label}</div>
+        <div className="ms-reveal grid gap-x-12 gap-y-10 sm:grid-cols-2">
+          {items.map((item) => (
+            <div key={item.title} className="flex gap-3.5">
+              <div className="mt-0.5 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl border border-blue-100 bg-blue-50 text-blue-600">
+                <item.icon className="h-5 w-5" strokeWidth={1.8} />
+              </div>
+              <div>
+                <h3 className="font-display mb-1.5 text-[15px] font-bold text-gray-900">
+                  {item.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-gray-500">{item.desc}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -861,25 +937,68 @@ function Contact() {
 
 function FinalCTA() {
   return (
-    <section className="relative overflow-hidden bg-gray-950 py-28" id="cta">
-      <div
-        className="pointer-events-none absolute top-0 left-1/2 h-[400px] w-[800px] -translate-x-1/2 rounded-full opacity-[0.08]"
-        style={{
-          background: "radial-gradient(ellipse at center, #2563eb, transparent)",
-        }}
-      />
-      <div className="ms-reveal relative z-10 mx-auto max-w-3xl px-6 text-center">
-        <h2 className="font-display mb-6 text-5xl leading-[1.06] font-black tracking-tight text-white lg:text-6xl">
-          Build Better <span className="text-blue-400">First Impressions</span>
-        </h2>
-        <p className="mx-auto mb-10 max-w-md text-lg leading-relaxed text-gray-400">
-          Available now on Google Play. App Store version is coming soon.
-        </p>
-        <div className="mb-8 flex flex-wrap justify-center">
-          <StoreButtons tone="dark" className="justify-center" />
-        </div>
-        <div className="text-xs font-medium text-gray-600">
-          Free plan available. No credit card required.
+    <section className="relative overflow-hidden bg-white pt-28 pb-20 sm:pt-32" id="cta">
+      {/* Soft accent waves like the reference */}
+      <svg
+        className="pointer-events-none absolute top-8 right-0 h-40 w-64 text-amber-200/70 sm:right-10"
+        viewBox="0 0 240 120"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M10 80c40-50 70-50 110 0s70 50 110 0"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+        <path
+          d="M30 100c36-40 64-40 100 0s64 40 100 0"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+      </svg>
+
+      <div className="relative mx-auto max-w-6xl px-6">
+        <div className="ms-reveal relative">
+          {/*
+            Clip from above the banner down to its bottom edge —
+            phone top stays visible, bottom of the device is hidden.
+          */}
+          <div className="pointer-events-none absolute inset-x-0 -top-28 bottom-0 z-20 hidden overflow-hidden rounded-b-[40px] lg:block">
+            <div className="absolute top-0 right-10 w-[220px] xl:right-16 xl:w-[250px]">
+              <img
+                src="/hero/fitness_app_transparent.png"
+                alt="Fitness app mockup created with MockShot"
+                className="w-full drop-shadow-[0_28px_50px_rgba(15,23,42,0.28)]"
+                draggable={false}
+              />
+            </div>
+          </div>
+
+          <div className="relative overflow-hidden rounded-[40px] bg-blue-600 px-8 py-12 sm:px-12 lg:min-h-[300px] lg:px-16 lg:py-14">
+            <div className="relative z-10 max-w-xl lg:max-w-[52%]">
+              <h2 className="font-display mb-4 text-4xl font-black leading-[1.08] tracking-tight text-white lg:text-[44px]">
+                Get MockShot today
+              </h2>
+              <p className="mb-8 max-w-md text-base leading-relaxed text-blue-100 sm:text-lg">
+                Create store-ready screenshots and device mockups from your phone. Available now on
+                Google Play — iOS coming soon.
+              </p>
+
+              <StoreButtons tone="hero" />
+            </div>
+
+            {/* Mobile — clip bottom of device the same way */}
+            <div className="relative z-10 mx-auto mt-10 h-[240px] max-w-[200px] overflow-hidden lg:hidden">
+              <img
+                src="/hero/fitness_app_transparent.png"
+                alt="Fitness app mockup created with MockShot"
+                className="w-full drop-shadow-[0_24px_40px_rgba(0,0,0,0.3)]"
+                draggable={false}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -894,9 +1013,8 @@ export function Landing() {
       <HowItWorks />
       <Features />
       <WhyMockShot />
-      <Showcase />
       {/* <Timeline /> */}
-      <Market />
+      {/* <Market /> */}
       {/* <Pricing /> */}
       {/* <Testimonials /> */}
       <FAQ />

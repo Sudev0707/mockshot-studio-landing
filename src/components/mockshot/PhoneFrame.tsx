@@ -205,3 +205,69 @@ export function ShowcaseScreen({ from, to }: { from: string; to: string }) {
     </div>
   );
 }
+
+/** Secondary app screen used behind the hero foreground phone. */
+export function ExportScreen() {
+  return (
+    <div className="flex h-full w-full flex-col overflow-hidden bg-gray-950">
+      <div className="flex items-center justify-between px-5 pt-1 text-[8.5px] font-semibold text-white/45">
+        <span>9:41</span>
+        <span>●●● 100%</span>
+      </div>
+      <div className="px-4 pt-2 pb-2">
+        <div className="text-[14px] font-bold tracking-tight text-white">Export</div>
+        <div className="mt-0.5 text-[8.5px] text-gray-400">App Store · 6.7"</div>
+      </div>
+      <div className="flex-1 space-y-2.5 overflow-hidden px-3">
+        <div
+          className="flex flex-col items-center justify-center gap-2 rounded-[18px] p-3"
+          style={{ background: "linear-gradient(145deg, #3b82f6, #1d4ed8)" }}
+        >
+          <div className="h-[88px] w-14 rounded-[14px] bg-white/25 shadow-lg ring-1 ring-white/20" />
+          <div className="h-1.5 w-16 rounded-full bg-white/45" />
+          <div className="h-1 w-10 rounded-full bg-white/25" />
+        </div>
+        <div className="rounded-[16px] bg-white/[0.07] p-2.5">
+          <div className="mb-1.5 flex items-center justify-between">
+            <span className="text-[8px] font-semibold text-white/70">Resolution</span>
+            <span className="text-[8px] font-bold text-blue-400">1290 × 2796</span>
+          </div>
+          <div className="h-1.5 overflow-hidden rounded-full bg-white/10">
+            <div className="h-full w-[82%] rounded-full bg-blue-500" />
+          </div>
+          <div className="mt-1.5 text-[7px] text-white/35">4K ready · PNG</div>
+        </div>
+        <div className="flex gap-1.5">
+          {["1x", "2x", "3x"].map((scale, i) => (
+            <div
+              key={scale}
+              className={`flex-1 rounded-xl py-2 text-center text-[8px] font-semibold ${
+                i === 2 ? "bg-blue-600 text-white" : "bg-white/[0.07] text-white/45"
+              }`}
+            >
+              {scale}
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="mt-1.5 flex items-center justify-around border-t border-white/[0.07] px-6 py-2.5">
+        {[
+          { label: "Home", active: false },
+          { label: "Devices", active: false },
+          { label: "Export", active: true },
+        ].map((tab) => (
+          <div key={tab.label} className="flex flex-col items-center gap-0.5">
+            <div
+              className={`mb-0.5 h-1 w-5 rounded-full ${tab.active ? "bg-blue-400" : "bg-white/15"}`}
+            />
+            <span
+              className={`text-[7px] font-medium ${tab.active ? "text-blue-400" : "text-white/30"}`}
+            >
+              {tab.label}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

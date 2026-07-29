@@ -1,6 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
-import { Github, Linkedin, Menu, Smartphone, Twitter, X } from "lucide-react";
+import { Github, Linkedin, Menu, Twitter, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -35,17 +35,13 @@ export function Nav() {
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Link to="/" className="flex items-center gap-2.5">
-          <div
-            className={cn(
-              "flex h-8 w-8 items-center justify-center rounded-[10px] shadow-sm",
-              lightNav ? "bg-white" : "bg-blue-600",
-            )}
-          >
-            <Smartphone
-              className={cn("h-4 w-4", lightNav ? "text-blue-600" : "text-white")}
-              strokeWidth={2.2}
-            />
-          </div>
+          <img
+            src="/logo/app_icon.png"
+            alt="MockShot"
+            className="h-8 w-8 rounded-[10px] shadow-sm"
+            width={32}
+            height={32}
+          />
           <span
             className={cn(
               "font-display text-[17px] font-bold tracking-tight",
@@ -171,9 +167,13 @@ export function Footer() {
         <div className="mb-14 grid gap-10 md:grid-cols-5">
           <div className="md:col-span-2">
             <Link to="/" className="mb-5 flex items-center gap-2.5">
-              <div className="flex h-8 w-8 items-center justify-center rounded-[10px] bg-blue-600">
-                <Smartphone className="h-4 w-4 text-white" strokeWidth={2.2} />
-              </div>
+              <img
+                src="/logo/app_icon.png"
+                alt="MockShot"
+                className="h-8 w-8 rounded-[10px]"
+                width={32}
+                height={32}
+              />
               <span className="font-display text-[17px] font-bold tracking-tight text-white">
                 MockShot
               </span>
