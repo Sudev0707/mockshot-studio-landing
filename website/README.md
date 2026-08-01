@@ -1,4 +1,4 @@
-# MockShot Website
+# MockPixel Website
 
 Pure HTML/CSS marketing site. No frameworks.
 

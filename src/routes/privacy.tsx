@@ -5,15 +5,15 @@ export const Route = createFileRoute("/privacy")({
   component: Privacy,
   head: () => ({
     meta: [
-      { title: "Privacy Policy — MockShot" },
+      { title: "Privacy Policy — MockPixel" },
       {
         name: "description",
-        content: "How MockShot collects, uses, stores, and protects your personal information.",
+        content: "How MockPixel collects, uses, stores, and protects your personal information.",
       },
-      { property: "og:title", content: "Privacy Policy — MockShot" },
+      { property: "og:title", content: "Privacy Policy — MockPixel" },
       {
         property: "og:description",
-        content: "How MockShot collects, uses, stores, and protects your personal information.",
+        content: "How MockPixel collects, uses, stores, and protects your personal information.",
       },
       { property: "og:type", content: "article" },
       { property: "og:url", content: "/privacy" },
@@ -38,13 +38,13 @@ function Privacy() {
       <div className="mx-auto max-w-6xl px-6">
         <article className="ms-legal-page">
           <p>
-            MockShot (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) respects your privacy. This
-            Privacy Policy explains what information we collect when you use the MockShot website,
+            MockPixel (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) respects your privacy. This
+            Privacy Policy explains what information we collect when you use the MockPixel website,
             mobile apps, and related services (the &quot;Service&quot;), how we use it, and the
             choices you have.
           </p>
           <p>
-            By using MockShot, you agree to the collection and use of information as described in
+            By using MockPixel, you agree to the collection and use of information as described in
             this policy. If you do not agree, please do not use the Service.
           </p>
 
@@ -61,7 +61,7 @@ function Privacy() {
           <h3>Content you provide</h3>
           <p>
             Screenshots, images, logos, backgrounds, and other assets you upload or create in
-            MockShot are processed so we can deliver mockups and exports. We do not sell this
+            MockPixel are processed so we can deliver mockups and exports. We do not sell this
             content.
           </p>
 
@@ -75,14 +75,14 @@ function Privacy() {
           <h3>Communications</h3>
           <p>
             If you contact us at{" "}
-            <a href="mailto:support@mockshot.app">support@mockshot.app</a>, we keep the contents of
+            <a href="mailto:support@MockPixel.app">support@MockPixel.app</a>, we keep the contents of
             that correspondence so we can respond and improve support.
           </p>
 
           <h2>2. How we use information</h2>
           <p>We use the information we collect to:</p>
           <ul>
-            <li>Provide, operate, and improve MockShot</li>
+            <li>Provide, operate, and improve MockPixel</li>
             <li>Create, process, and export your mockups and screenshots</li>
             <li>Authenticate accounts and process subscriptions or purchases</li>
             <li>Send transactional messages (receipts, security alerts, product updates)</li>
@@ -104,7 +104,7 @@ function Privacy() {
             </li>
             <li>
               <strong>Legal requirements</strong> — when required by law, court order, or to protect
-              the rights, safety, and property of MockShot or others
+              the rights, safety, and property of MockPixel or others
             </li>
             <li>
               <strong>Business transfers</strong> — in connection with a merger, acquisition, or
@@ -144,13 +144,13 @@ function Privacy() {
           </ul>
           <p>
             To exercise these rights, email{" "}
-            <a href="mailto:support@mockshot.app">support@mockshot.app</a>. We may need to verify your
+            <a href="mailto:support@MockPixel.app">support@MockPixel.app</a>. We may need to verify your
             identity before fulfilling a request.
           </p>
 
           <h2>7. Children&apos;s privacy</h2>
           <p>
-            MockShot is not directed to children under 13 (or the minimum age required in your
+            MockPixel is not directed to children under 13 (or the minimum age required in your
             jurisdiction). We do not knowingly collect personal information from children. If you
             believe a child has provided us information, contact us and we will take appropriate
             steps to delete it.
@@ -158,7 +158,7 @@ function Privacy() {
 
           <h2>8. International transfers</h2>
           <p>
-            MockShot may process information on servers located outside your country of residence.
+            MockPixel may process information on servers located outside your country of residence.
             Where required, we use appropriate safeguards for cross-border transfers.
           </p>
 
@@ -180,7 +180,7 @@ function Privacy() {
           <h2>11. Contact</h2>
           <p>
             Questions about this Privacy Policy or your data? Reach us at{" "}
-            <a href="mailto:support@mockshot.app">support@mockshot.app</a>.
+            <a href="mailto:support@MockPixel.app">support@MockPixel.app</a>.
           </p>
           <p>
             See also our <Link to="/terms">Terms of Service</Link>.

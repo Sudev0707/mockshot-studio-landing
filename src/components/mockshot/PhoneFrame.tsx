@@ -99,7 +99,7 @@ export function PhoneFrame({
   );
 }
 
-export function MockShotScreen() {
+export function MockPixelScreen() {
   const projects = [
     {
       name: "Hero Screenshot",
@@ -134,7 +134,7 @@ export function MockShotScreen() {
         <span>●●● 100%</span>
       </div>
       <div className="px-4 pt-2 pb-3">
-        <div className="text-[14px] font-bold tracking-tight text-white">MockShot</div>
+        <div className="text-[14px] font-bold tracking-tight text-white">MockPixel</div>
         <div className="mt-0.5 text-[8.5px] text-gray-400">3 projects · 2 ready</div>
       </div>
       <div className="flex-1 space-y-2 overflow-hidden px-3">

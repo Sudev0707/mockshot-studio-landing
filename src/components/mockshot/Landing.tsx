@@ -126,7 +126,7 @@ function Hero() {
             >
               <img
                 src="/hero/choose_device_transparent.png"
-                alt="MockShot choose device screen"
+                alt="MockPixel choose device screen"
                 className="w-full origin-bottom rotate-[6deg] drop-shadow-[0_28px_48px_rgba(0,0,0,0.32)]"
                 draggable={false}
               />
@@ -136,7 +136,7 @@ function Hero() {
             <div className="ms-float absolute bottom-0 left-0 z-20 w-[66%] sm:left-1">
               <img
                 src="/hero/mockshot_transparent.png"
-                alt="MockShot home screen"
+                alt="MockPixel home screen"
                 className="w-full origin-bottom -rotate-[5deg] drop-shadow-[0_40px_64px_rgba(0,0,0,0.4)]"
                 draggable={false}
               />
@@ -215,7 +215,7 @@ function HowItWorks() {
           <SectionBadge tone="blue">HOW IT WORKS</SectionBadge>
           <h2 className="font-display mb-4 text-4xl font-black tracking-tight text-gray-900 lg:text-[42px]">
             Easy steps for{" "}
-            <span className="text-blue-600">MockShot makers</span>
+            <span className="text-blue-600">MockPixel makers</span>
           </h2>
           <p className="mb-10 max-w-md text-lg leading-relaxed text-gray-500">
             From raw screenshot to polished store asset — designed to feel natural on your phone.
@@ -247,7 +247,7 @@ function HowItWorks() {
           <div className="absolute inset-y-6 right-0 left-8 rounded-[32px] bg-sky-50 sm:left-16" />
           <img
             src="/hero/choose_device_transparent.png"
-            alt="MockShot choose device screen"
+            alt="MockPixel choose device screen"
             className="relative z-10 w-[72%] max-w-[280px] drop-shadow-[0_32px_56px_rgba(15,23,42,0.22)] sm:w-[68%]"
             draggable={false}
           />
@@ -409,7 +409,7 @@ function Features() {
           "Text, image, background, and device tabs in one sheet",
         ]}
         image="/hero/playstore_phone_transparent.png"
-        imageAlt="MockShot Play Store screenshot editor"
+        imageAlt="MockPixel Play Store screenshot editor"
         softBg="bg-indigo-50/80"
       />
 
@@ -424,7 +424,7 @@ function Features() {
           "Horizontal stretch controls for perfect edge match",
         ]}
         image="/hero/adjust_screenshot_transparent.png"
-        imageAlt="MockShot adjust screenshot properties"
+        imageAlt="MockPixel adjust screenshot properties"
         reverse
         softBg="bg-sky-50"
       />
@@ -432,7 +432,7 @@ function Features() {
   );
 }
 
-function WhyMockShot() {
+function WhyMockPixel() {
   const items = [
     {
       icon: Smartphone,
@@ -470,7 +470,7 @@ function WhyMockShot() {
     <section className="bg-white py-24" id="why">
       <div className="mx-auto max-w-5xl px-6">
         <div className="ms-reveal mb-14 text-center">
-          <SectionBadge>WHY MOCKSHOT</SectionBadge>
+          <SectionBadge>WHY MockPixel</SectionBadge>
           <h2 className="font-display mb-4 text-4xl font-black tracking-tight text-gray-900">
             Built for how makers actually ship
           </h2>
@@ -782,7 +782,7 @@ function Testimonials() {
       color: "#0ea5e9",
       initial: "S",
       quote:
-        "MockShot changed how I prepare App Store launches. I used to spend days in Figma perfecting screenshots. Now I do it from my phone in under 20 minutes.",
+        "MockPixel changed how I prepare App Store launches. I used to spend days in Figma perfecting screenshots. Now I do it from my phone in under 20 minutes.",
     },
     {
       name: "Marco Rivera",
@@ -791,7 +791,7 @@ function Testimonials() {
       color: "#8b5cf6",
       initial: "M",
       quote:
-        "I shipped 3 apps last quarter. MockShot made the screenshot process effortless. Honestly the best $4.99 I spend each month as a developer.",
+        "I shipped 3 apps last quarter. MockPixel made the screenshot process effortless. Honestly the best $4.99 I spend each month as a developer.",
     },
     {
       name: "Priya Nair",
@@ -810,7 +810,7 @@ function Testimonials() {
         <div className="ms-reveal mb-16 text-center">
           <SectionBadge>TESTIMONIALS</SectionBadge>
           <h2 className="font-display mb-4 text-4xl font-black tracking-tight text-gray-900">
-            Developers love MockShot
+            Developers love MockPixel
           </h2>
         </div>
 
@@ -849,12 +849,12 @@ function Testimonials() {
 
 const faqs = [
   {
-    q: "What platforms is MockShot available on?",
-    a: "MockShot is available now on Android via Google Play. The iOS / App Store version is coming soon.",
+    q: "What platforms is MockPixel available on?",
+    a: "MockPixel is available now on Android via Google Play. The iOS / App Store version is coming soon.",
   },
   {
     q: "Which devices can I create mockups for?",
-    a: "MockShot supports 30+ device frames including the full iPhone 15 lineup, older iPhones, Android flagships (Samsung, Google Pixel), iPad Pro, and more. We add new devices as they launch.",
+    a: "MockPixel supports 30+ device frames including the full iPhone 15 lineup, older iPhones, Android flagships (Samsung, Google Pixel), iPad Pro, and more. We add new devices as they launch.",
   },
   {
     q: "What's the maximum export resolution?",
@@ -862,7 +862,7 @@ const faqs = [
   },
   {
     q: "Do I need any design experience?",
-    a: "Not at all. MockShot is designed for developers, founders, and anyone who needs professional-looking screenshots without a design background. If you can tap, you can create.",
+    a: "Not at all. MockPixel is designed for developers, founders, and anyone who needs professional-looking screenshots without a design background. If you can tap, you can create.",
   },
   {
     q: "Can I use my own background images?",
@@ -923,10 +923,10 @@ function Contact() {
             Questions, feedback, or partnership ideas — we&apos;d love to hear from you.
           </p>
           <a
-            href="mailto:support@mockshot.app"
+            href="mailto:support@MockPixel.app"
             className="font-display inline-flex items-center gap-2 text-2xl font-bold text-blue-600 transition-colors hover:text-blue-500"
           >
-            support@mockshot.app
+            support@MockPixel.app
             <ArrowRight className="h-5 w-5" />
           </a>
         </div>
@@ -969,7 +969,7 @@ function FinalCTA() {
             <div className="absolute top-0 right-10 w-[220px] xl:right-16 xl:w-[250px]">
               <img
                 src="/hero/fitness_app_transparent.png"
-                alt="Fitness app mockup created with MockShot"
+                alt="Fitness app mockup created with MockPixel"
                 className="w-full drop-shadow-[0_28px_50px_rgba(15,23,42,0.28)]"
                 draggable={false}
               />
@@ -979,7 +979,7 @@ function FinalCTA() {
           <div className="relative overflow-hidden rounded-[40px] bg-blue-600 px-8 py-12 sm:px-12 lg:min-h-[300px] lg:px-16 lg:py-14">
             <div className="relative z-10 max-w-xl lg:max-w-[52%]">
               <h2 className="font-display mb-4 text-4xl font-black leading-[1.08] tracking-tight text-white lg:text-[44px]">
-                Get MockShot today
+                Get MockPixel today
               </h2>
               <p className="mb-8 max-w-md text-base leading-relaxed text-blue-100 sm:text-lg">
                 Create store-ready screenshots and device mockups from your phone. Available now on
@@ -993,7 +993,7 @@ function FinalCTA() {
             <div className="relative z-10 mx-auto mt-10 h-[240px] max-w-[200px] overflow-hidden lg:hidden">
               <img
                 src="/hero/fitness_app_transparent.png"
-                alt="Fitness app mockup created with MockShot"
+                alt="Fitness app mockup created with MockPixel"
                 className="w-full drop-shadow-[0_24px_40px_rgba(0,0,0,0.3)]"
                 draggable={false}
               />
@@ -1012,7 +1012,7 @@ export function Landing() {
       {/* <TrustedBy /> */}
       <HowItWorks />
       <Features />
-      <WhyMockShot />
+      <WhyMockPixel />
       {/* <Timeline /> */}
       {/* <Market /> */}
       <Pricing />

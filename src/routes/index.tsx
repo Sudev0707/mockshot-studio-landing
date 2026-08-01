@@ -7,13 +7,13 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
     meta: [
-      { title: "MockShot — Device Mockups & App Store Screenshots" },
+      { title: "MockPixel — Device Mockups & App Store Screenshots" },
       {
         name: "description",
         content:
           "Design store-ready device mockups and App Store & Google Play screenshots in minutes. Professional exports, no design experience required.",
       },
-      { property: "og:title", content: "MockShot — Device Mockups & App Store Screenshots" },
+      { property: "og:title", content: "MockPixel — Device Mockups & App Store Screenshots" },
       {
         property: "og:description",
         content:

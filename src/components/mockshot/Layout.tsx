@@ -39,7 +39,7 @@ export function Nav() {
         <Link to="/" className="flex items-center gap-2.5">
           <img
             src="/logo/app_icon.png"
-            alt="MockShot"
+            alt="MockPixel"
             className="h-8 w-8 rounded-[10px] shadow-sm"
             width={32}
             height={32}
@@ -50,7 +50,7 @@ export function Nav() {
               lightNav ? "text-white" : "text-gray-900",
             )}
           >
-            MockShot
+            MockPixel
           </span>
         </Link>
 
@@ -156,7 +156,7 @@ export function Footer() {
     {
       heading: "Support",
       links: [
-        { label: "Email us", href: "mailto:support@mockshot.app" },
+        { label: "Email us", href: "mailto:support@MockPixel.app" },
         { label: "Privacy", href: "/privacy" },
         { label: "Terms", href: "/terms" },
       ],
@@ -171,13 +171,13 @@ export function Footer() {
             <Link to="/" className="mb-5 flex items-center gap-2.5">
               <img
                 src="/logo/app_icon.png"
-                alt="MockShot"
+                alt="MockPixel"
                 className="h-8 w-8 rounded-[10px]"
                 width={32}
                 height={32}
               />
               <span className="font-display text-[17px] font-bold tracking-tight text-white">
-                MockShot
+                MockPixel
               </span>
             </Link>
             <p className="mb-7 max-w-[260px] text-sm leading-relaxed text-gray-500">
@@ -234,7 +234,7 @@ export function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-4 border-t border-white/[0.06] pt-8 md:flex-row">
           <div className="text-xs font-medium text-gray-700">
-            © 2026 MockShot. All rights reserved.
+            © 2026 MockPixel. All rights reserved.
           </div>
           <div className="flex items-center gap-5">
             <Link to="/privacy" className="text-xs text-gray-700 transition-colors hover:text-gray-400">
@@ -244,7 +244,7 @@ export function Footer() {
               Terms
             </Link>
             <a
-              href="mailto:support@mockshot.app"
+              href="mailto:support@MockPixel.app"
               className="text-xs text-gray-700 transition-colors hover:text-gray-400"
             >
               Contact

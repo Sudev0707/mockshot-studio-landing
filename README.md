@@ -1,4 +1,4 @@
-# MockShot Studio
+# MockPixel Studio
 
 Create polished device mockups for your screenshots.
 
@@ -8,7 +8,7 @@ You need Node.js 22+.
 
 ```sh
 git clone <this-repository-url>
-cd mockshot-studio
+cd MockPixel-studio
 npm install
 npm run dev
 ```
