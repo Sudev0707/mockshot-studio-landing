@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { PLAY_STORE_URL } from "@/lib/links";
 
 function GooglePlayIcon({ className }: { className?: string }) {
   return (
@@ -51,7 +52,7 @@ export function StoreButtons({
   return (
     <div className={cn("flex flex-wrap gap-3", className)}>
       <a
-        href={playStoreUrl}
+        href={PLAY_STORE_URL}
         className={cn(
           "inline-flex min-w-[200px] items-center gap-3 rounded-[12px] px-5 py-3 transition-all",
           playStyles,
