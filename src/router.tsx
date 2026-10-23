@@ -2,13 +2,16 @@ import { QueryClient } from "@tanstack/react-query";
 import { createRouter } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
 
+const APP_BASE_PATH = '/apps/mockpixel';
+
+
 export const getRouter = () => {
   const queryClient = new QueryClient();
 
   const router = createRouter({
     routeTree,
 
-    basepath: '/apps/mockpixel', 
+    basepath: APP_BASE_PATH , 
     context: { queryClient },
     scrollRestoration: true,
     defaultPreloadStaleTime: 0,
