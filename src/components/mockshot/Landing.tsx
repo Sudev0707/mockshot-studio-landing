@@ -923,10 +923,10 @@ function Contact() {
             Questions, feedback, or partnership ideas — we&apos;d love to hear from you.
           </p>
           <a
-            href="mailto:support@MockPixel.app"
+            href="mailto:sudev.appternal@gmail.com"
             className="font-display inline-flex items-center gap-2 text-2xl font-bold text-blue-600 transition-colors hover:text-blue-500"
           >
-            support@MockPixel.app
+            sudev.appternal@gmail.com
             <ArrowRight className="h-5 w-5" />
           </a>
         </div>

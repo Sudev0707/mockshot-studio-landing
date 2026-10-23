@@ -156,7 +156,7 @@ export function Footer() {
     {
       heading: "Support",
       links: [
-        { label: "Email us", href: "mailto:support@MockPixel.app" },
+        { label: "Email us", href: "mailto:sudev.appternal@gmail.com" },
         { label: "Privacy", href: "/privacy" },
         { label: "Terms", href: "/terms" },
       ],
@@ -234,7 +234,7 @@ export function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-4 border-t border-white/[0.06] pt-8 md:flex-row">
           <div className="text-xs font-medium text-gray-700">
-            © 2026 MockPixel. All rights reserved.
+            © 2026 Appternal
           </div>
           <div className="flex items-center gap-5">
             <Link to="/privacy" className="text-xs text-gray-700 transition-colors hover:text-gray-400">
@@ -244,7 +244,7 @@ export function Footer() {
               Terms
             </Link>
             <a
-              href="mailto:support@MockPixel.app"
+              href="mailto:sudev.appternal@gmail.com"
               className="text-xs text-gray-700 transition-colors hover:text-gray-400"
             >
               Contact

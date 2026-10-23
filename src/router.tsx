@@ -7,6 +7,8 @@ export const getRouter = () => {
 
   const router = createRouter({
     routeTree,
+
+    basepath: '/apps/mockpixel', 
     context: { queryClient },
     scrollRestoration: true,
     defaultPreloadStaleTime: 0,

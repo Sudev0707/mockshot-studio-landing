@@ -6,6 +6,7 @@ import { defineConfig } from "vite";
 import tsConfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
+  base: "/apps/mockpixel/",
   resolve: {
     dedupe: ["react", "react-dom", "@tanstack/react-router", "@tanstack/react-query"],
   },
