@@ -17,7 +17,9 @@ export default defineConfig({
       // Custom SSR entry with error-page wrapper (src/server.ts)
       server: { entry: "server" },
     }),
-    nitro(),
+    nitro({
+      baseURL: "/apps/mockpixel/",
+    }),
     viteReact(),
   ],
 });
