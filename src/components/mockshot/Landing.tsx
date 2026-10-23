@@ -21,6 +21,7 @@ import {
   Upload,
   Users,
 } from "lucide-react";
+import { asset } from "@/lib/asset";
 
 function SectionBadge({
   children,
@@ -125,7 +126,7 @@ function Hero() {
               style={{ animationDelay: "-2.5s" }}
             >
               <img
-                src="/hero/choose_device_transparent.png"
+                src={asset("hero/choose_device_transparent.png")}
                 alt="MockPixel choose device screen"
                 className="w-full origin-bottom rotate-[6deg] drop-shadow-[0_28px_48px_rgba(0,0,0,0.32)]"
                 draggable={false}
@@ -135,7 +136,7 @@ function Hero() {
             {/* Front phone — Home / projects */}
             <div className="ms-float absolute bottom-0 left-0 z-20 w-[66%] sm:left-1">
               <img
-                src="/hero/mockshot_transparent.png"
+                src={asset("hero/mockshot_transparent.png")}
                 alt="MockPixel home screen"
                 className="w-full origin-bottom -rotate-[5deg] drop-shadow-[0_40px_64px_rgba(0,0,0,0.4)]"
                 draggable={false}
@@ -246,7 +247,7 @@ function HowItWorks() {
         <div className="ms-reveal relative flex min-h-[480px] items-end justify-center lg:min-h-[560px]">
           <div className="absolute inset-y-6 right-0 left-8 rounded-[32px] bg-sky-50 sm:left-16" />
           <img
-            src="/hero/choose_device_transparent.png"
+            src={asset("hero/choose_device_transparent.png")}
             alt="MockPixel choose device screen"
             className="relative z-10 w-[72%] max-w-[280px] drop-shadow-[0_32px_56px_rgba(15,23,42,0.22)] sm:w-[68%]"
             draggable={false}
@@ -408,7 +409,7 @@ function Features() {
           "Gradient & solid background picker with live preview",
           "Text, image, background, and device tabs in one sheet",
         ]}
-        image="/hero/playstore_phone_transparent.png"
+        image={asset("hero/playstore_phone_transparent.png")}
         imageAlt="MockPixel Play Store screenshot editor"
         softBg="bg-indigo-50/80"
       />
@@ -423,7 +424,7 @@ function Features() {
           "Quick zoom steps from 1x to 2x",
           "Horizontal stretch controls for perfect edge match",
         ]}
-        image="/hero/adjust_screenshot_transparent.png"
+        image={asset("hero/adjust_screenshot_transparent.png")}
         imageAlt="MockPixel adjust screenshot properties"
         reverse
         softBg="bg-sky-50"
@@ -968,7 +969,7 @@ function FinalCTA() {
           <div className="pointer-events-none absolute inset-x-0 -top-28 bottom-0 z-20 hidden overflow-hidden rounded-b-[40px] lg:block">
             <div className="absolute top-0 right-10 w-[220px] xl:right-16 xl:w-[250px]">
               <img
-                src="/hero/fitness_app_transparent.png"
+                src={asset("hero/fitness_app_transparent.png")}
                 alt="Fitness app mockup created with MockPixel"
                 className="w-full drop-shadow-[0_28px_50px_rgba(15,23,42,0.28)]"
                 draggable={false}
@@ -992,7 +993,7 @@ function FinalCTA() {
             {/* Mobile — clip bottom of device the same way */}
             <div className="relative z-10 mx-auto mt-10 h-[240px] max-w-[200px] overflow-hidden lg:hidden">
               <img
-                src="/hero/fitness_app_transparent.png"
+                src={asset("hero/fitness_app_transparent.png")}
                 alt="Fitness app mockup created with MockPixel"
                 className="w-full drop-shadow-[0_24px_40px_rgba(0,0,0,0.3)]"
                 draggable={false}
